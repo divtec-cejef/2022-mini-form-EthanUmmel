@@ -4,12 +4,8 @@
  */
 
 'use strict';
-const formulaire = document.querySelector('form');
-const elementliste = document.getElementsByTagName('background')
-
-
-formulaire.addEventListener('change', function(event) {
-
+const listeBackground = document.getElementById('background');
+listeBackground.addEventListener('change', function() {
+    let img = './img/backgrounds/' + listeBackground.value;
+    document.body.style.backgroundImage = `url(${img})`;
 });
-
-console.log('Test liaison JS');
